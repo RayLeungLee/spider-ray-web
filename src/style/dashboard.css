@@ -1,0 +1,51 @@
+.box-card{
+  margin-bottom: 20px;
+}
+
+.add-btn{
+  text-align: right;
+  margin: 8px 0 12px 0;
+}
+
+.del-btn{
+  margin: -3px 0 0 0;
+  float: right
+}
+
+.el-card__header{
+  padding: 10px 20px !important;
+}
+.el-table td, .el-table th {
+  padding: 6px 0 !important;
+}
+.el-table__empty-block {
+  min-height: 45px !important;
+}
+.el-upload.el-upload--text,
+.el-upload-list {
+  float: left !important;
+}
+.el-upload-list {
+    margin: 0 !important;
+}
+.el-upload-list__item:first-child {
+    margin-top: 4px !important;
+}
+.el-form-item__content {
+    line-height: 32px !important;
+    margin-bottom: 20px;
+}
+.el-collapse-item__header {
+  font-size: 15px !important;
+  text-indent: 8px;
+}
+.el-collapse {
+  border-top: none !important;
+  border-bottom: none !important;
+}
+.el-collapse-item:last-child {
+  margin-bottom: 0 !important;
+}
+.el-collapse-item__wrap {
+  border-bottom: none !important;
+}

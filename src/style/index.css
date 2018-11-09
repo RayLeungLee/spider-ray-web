@@ -1,0 +1,133 @@
+
+
+body>.el-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+  
+  .el-container {
+    height: 100%;
+    min-width: 85%;
+  }
+  
+  .el-header {
+    font-size: 20px;
+    text-align: left;
+    line-height: 64px;
+    background-color: #fff;
+    color: #000;
+    height: 64px !important;
+    box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  }
+  
+  .el-header>div {
+    float: right;
+  }
+  
+  .el-header>div>span {
+    font-family: 微软雅黑;
+    font-size: 14px;
+  }
+  
+  .el-aside {
+    color: #333;
+    text-align: left;
+    height: 100%;
+  }
+  
+  .el-main {
+    /*background-color: #E9EEF3;*/
+    color: #333;
+    height: 100%;
+  }
+  
+  body {
+    background-color: #fcfbfb;
+  }
+  
+  .index_container a {
+    color: darkslategray;
+    text-decoration: none;
+  }
+
+  .is-active-once{
+    background-color: #20a0ff
+  }
+  
+  .el-menu.el-menu--inline li {
+    background-color: #000c17 !important;
+    /* margin: 4px 0; */
+  }
+  
+  .el-menu.el-menu--inline li:hover,
+  li.el-submenu .el-submenu__title:hover {
+    color: #fff !important;
+  }
+  
+  /* .el-submenu__title:hover {
+      background-color: #001529 !important;
+    } */
+  
+  ul .el-menu-item.is-active {
+    background-color: #20a0ff !important;
+  }
+  
+  .is-active.is-opened div {
+    color: #fff !important;
+  }
+  
+  .el-menu.el-menu--inline {
+    background: #000c17 !important;
+  }
+  
+  .el-menu-item-group__title {
+    padding: 0 !important;
+    padding-left: 20px;
+  }
+  
+  .page-title {
+    color: #fff;
+    background-color: #002140;
+    font-size: 1.4em;
+    line-height: 64px;
+    height: 64px;
+  }
+  
+  .page-title>img {
+    display: inline-block;
+    float: left;
+    margin: 12px 2px 2px 12px;
+  }
+  
+  .menuBtn {
+    padding: 0 !important;
+    border: 0 !important;
+    font-size: 24px;
+    margin-top: 10px;
+    line-height: 50px;
+    height: 50px;
+    width: 50px;
+    background-color: #fff !important;
+  }
+  
+  .el-header {
+    padding: 0 20px 0 0 !important;
+  }
+  
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 100%;
+  }
+  
+  .el-menu-vertical-demo:not(.el-menu--collapse) {
+    width: 100%;
+  }
+  
+  .el-collapse-item__header {
+    border-bottom: 0 !important;
+  }
+  
+  .el-select-dropdown {
+    min-width: 170px;
+  }
