@@ -1,20 +1,20 @@
 <template>
   <el-container class="index_container">
     <el-aside :style="{flex: '0 0 '+flexWidth+' !important', width: 'auto !important'}" style="overflow: hidden !important;">
-      <el-menu default-active="dashboard" class="sidebar-el-menu el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse"
+      <el-menu :default-active="menuAcitve" class="sidebar-el-menu el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :collapse="isCollapse"
         background-color="#001529" text-color="#bfcbd9" active-text-color="#fff"
         unique-opened router style="height: 100%; overflow: hidden !important;">
         <div class="page-title">
           <img src="../assets/logo.png" height="40px">
           <span style="font-size: 15px">SpiderRay</span>
         </div>
-        <el-menu-item index="dashboard" class="is-active-once">
-          <i class="el-icon-news"></i>
+        <el-menu-item index="dashboard">
+          <i class="el-icon-time"></i>
           <span slot="title">Dashboard</span>
         </el-menu-item>
-        <el-menu-item index="jobs">
-          <i class="el-icon-bell"></i>
-          <span slot="title">Jobs</span>
+        <el-menu-item index="clients">
+          <i class="el-icon-news"></i>
+          <span slot="title">Clients</span>
         </el-menu-item>
       </el-menu>
     </el-aside>
@@ -35,11 +35,13 @@
           </el-dropdown>
         </div>
       </el-header>
-      <el-main>
-        <transition name="el-zoom-in-center">
-          <router-view></router-view>
-        </transition>
-      </el-main>
+      <el-scrollbar style="height:100%">
+        <el-main>
+          <transition name="el-zoom-in-center">
+              <router-view style="padding-right: 6px"></router-view>
+          </transition>
+        </el-main>
+      </el-scrollbar>
     </el-container>
   </el-container>
 </template>
@@ -52,14 +54,15 @@
         username: "",
         isCollapse: false,
         closeOpenIcon: "el-icon-d-arrow-left",
-        // asideWidth: '15%',
         flexWidth: "220px",
         screenWidth: document.body.clientWidth,
         canRun: true,
+        menuAcitve: ''
       };
     },
 
     mounted() {
+      this.menuAcitve = this.$route.name
       window.onresize = () => {
         return (() => {
           window.screenWidth = document.body.clientWidth;
@@ -73,7 +76,9 @@
         if (!this.canRun) {
           return;
         }
-        this.initAutoMenu();
+        setTimeout(() => {
+          this.initAutoMenu();
+        }, 50);
         this.canRun = false;
         setTimeout(() => {
           this.canRun = true;
@@ -117,14 +122,12 @@
         if (this.isCollapse === false) {
           this.isCollapse = true;
           this.closeOpenIcon = "el-icon-d-arrow-right";
-          // this.asideWidth = '65px'
           setTimeout(() => {
             this.flexWidth = "65px";
           }, 300);
         } else {
           this.isCollapse = false;
           this.closeOpenIcon = "el-icon-d-arrow-left";
-          // this.asideWidth = '15%'
           this.flexWidth = "220px";
         }
       },
@@ -143,4 +146,7 @@
 <style scoped>
   @import "../style/style.css";
   @import "../style/index.css";
+  .el-scrollbar__wrap{
+    overflow-x: hidden;
+  }
 </style>

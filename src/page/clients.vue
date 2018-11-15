@@ -1,6 +1,6 @@
 <template>
     <div>
-        jobs
+        clients
     </div>
 </template>
 

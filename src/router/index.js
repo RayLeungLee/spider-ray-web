@@ -2,7 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Index from "@/components/index";
 import Dashboard from "@/page/dashboard";
-import Jobs from "@/page/jobs";
+import Clients from "@/page/clients";
 
 Vue.use(Router);
 
@@ -10,8 +10,8 @@ const router = new Router({
   routes: [
     { name: "Index", path: "/", component: Index,
     children: [
-      {name: "Dashboard", path: "/dashboard", component: Dashboard},
-      {name: "Jobs", path: "/jobs", component: Jobs}
+      {name: "dashboard", path: "/dashboard", component: Dashboard},
+      {name: "clients", path: "/clients", component: Clients}
   ]
   }
   ]
